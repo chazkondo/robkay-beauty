@@ -1,0 +1,329 @@
+@font-face {
+  font-family: "Acumin-Pro";
+  src: url("/fonts/Acumin-RPro.otf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bodoni-Classic-Roman";
+  src: url("/fonts/Bodoni-Classic-Roman.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cursive";
+  src: url("/fonts/Cursive.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Feet";
+  src: url("/fonts/Feet.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+/* @font-face {
+  font-family: "Acumin-Pro";
+  src: url("/fonts/Acumin-BdPro.otf");
+  font-style: bold;
+  font-weight: 500;
+  font-display: swap;
+} */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-family: Acumin-Pro, sans-serif, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  white-space: pre-wrap;
+  font-style: normal;
+  letter-spacing: 0em;
+  text-transform: none;
+  line-height: 1.232;
+  font-size: 2em;
+  font-weight: 500;
+  filter: contrast(1.5);
+}
+
+p {
+  white-space: pre-wrap;
+  font-style: normal;
+  letter-spacing: 0em;
+  text-transform: none;
+  line-height: 1.232;
+  font-size: 1.8em;
+  font-weight: 500;
+  filter: contrast(1.5);
+}
+
+.logo {
+  font-family: Bodoni-Classic-Roman, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
+  font-size: 1.6rem;
+  letter-spacing: 1rem;
+  width: 100%;
+}
+
+.beauty {
+  color: rgba(160, 160, 160);
+}
+
+.faded {
+  position: relative;
+  display: inline-block;
+  color: black;
+}
+
+.faded:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-collapse: separate;
+}
+
+.faded.faded-all:after {
+  box-shadow: inset 0 0 100px 20px;
+}
+
+.websiteMenu {
+  display: flex;
+  list-style: none;
+}
+
+.services2 {
+  font-family: Cursive, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
+}
+
+.services {
+  font-family: Bodoni-Classic-Roman, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
+  font-size: 0.9rem;
+  color: rgb(210, 210, 210);
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 850px) {
+  .websiteMenu {
+    font-size: 0.85rem;
+  }
+}
+
+@media only screen and (pointer: coarse) and (max-width: 1024px),
+  screen and (max-width: 799px) {
+  .logo {
+    font-size: 1.3rem;
+    letter-spacing: calc((4 - 1) * 0.35vw);
+  }
+  .beauty {
+    position: absolute;
+    left: calc((4 - 1) * 0.1vw + 0.3rem);
+    top: calc((4 - 1) * 1.5vw + 1rem);
+  }
+  .menu-wrap {
+    display: block !important;
+  }
+  .websiteMenu {
+    display: none;
+  }
+  .services {
+    font-size: 0.575rem;
+    letter-spacing: calc((4 - 1) * 0.35vw);
+  }
+}
+
+@media screen and (min-width: 0) and (max-width: 2013px) and (orientation: landscape) {
+  h1 {
+    font-size: calc((4 - 1) * 1vw + 1rem);
+  }
+}
+
+/* CORE STYLES */
+:root {
+  --primary-color: rgba(13, 110, 139, 0.75);
+  --overlay-color: rgba(24, 39, 51, 0.85);
+  --menu-speed: 0.75s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* MENU STYLES */
+.menu-wrap {
+  position: fixed;
+  top: 0;
+  right: calc((4 - 1) * 0.1vw + 0.3rem);
+  z-index: 1;
+  display: none;
+}
+
+.menu-wrap .toggler {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+.menu-wrap .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-wrap .hamburger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hamburger Line */
+.menu-wrap .hamburger > div {
+  position: relative;
+  flex: none;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+/* Hamburger Lines - Top & Bottom */
+.menu-wrap .hamburger > div::before,
+.menu-wrap .hamburger > div::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+/* Moves Line Down */
+.menu-wrap .hamburger > div::after {
+  top: 10px;
+}
+
+/* Toggler Animation */
+.menu-wrap .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+
+/* Turns Lines Into X */
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* Rotate On Hover When Checked */
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+
+/* Show Menu */
+.menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+  transform: scale(1);
+  transition-duration: var(--menu-speed);
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+  opacity: 1;
+  transition: opacity 0.2s ease 0.2s;
+}
+
+.menu-wrap .menu > div {
+  border-radius: 50%;
+  width: 200vw;
+  height: 200vw;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.2s ease;
+}
+
+.menu-wrap .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li {
+  list-style: none;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
