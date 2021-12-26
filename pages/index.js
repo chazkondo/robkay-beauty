@@ -68,11 +68,11 @@ export default function Home() {
           width: '45%',
         }}
       >
-        <div class="menu-wrap">
+        <div className="menu-wrap">
 
-    <input onClick={() => toggleMenuState()} type="checkbox" class="toggler" checked={mobileMenuState}/>
-    <div class="hamburger"><div></div></div>
-    <div class="menu">
+    <input onClick={() => toggleMenuState()} type="checkbox" className="toggler" checked={mobileMenuState}/>
+    <div className="hamburger"><div></div></div>
+    <div className="menu">
       <div>
         <div>
           <ul>
@@ -114,7 +114,7 @@ export default function Home() {
           className={styles.contentWrapper}>
           <div className={styles.content}>
             <h1 className={styles.title}>
-            Robkay Beauty is your modern esthetician utilizing the latest make-up techniques to bring out each client's unique beauty.
+            Robkay Beauty is your modern esthetician utilizing the latest make-up techniques to bring out each client&apos;s unique beauty.
             </h1>
           </div>
         </div>
@@ -126,12 +126,12 @@ export default function Home() {
             <div className={styles.hideMobileAboutText}>
               <div style={{width: '75%'}}>
               <p className={styles.title}>
-                <i>Robkay Beauty is your modern esthetician utilizing the latest make-up techniques to bring out each client's unique beauty.</i>
+                <i>Robkay Beauty is your modern esthetician utilizing the latest make-up techniques to bring out each client&apos;s unique beauty.</i>
               </p>
               </div>
             </div>
         <div>
-        <span class="faded faded-all">
+        <span className="faded faded-all">
         <Image
           src={profilePic}
           alt="Picture of the author"
@@ -151,7 +151,7 @@ export default function Home() {
             <div className={styles.showMobileAboutText}>
               <div>
               <p>
-                <i>Robkay Beauty is your modern esthetician utilizing the latest make-up techniques to bring out each client's unique beauty.</i>
+                <i>Robkay Beauty is your modern esthetician utilizing the latest make-up techniques to bring out each client&apos;s unique beauty.</i>
               </p>
               </div>
             </div>
