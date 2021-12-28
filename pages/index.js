@@ -84,7 +84,7 @@ export default function Home() {
             <li><a onClick={() => toggleMenuStateOff()} href="#About">About</a></li>
             <li><a onClick={() => toggleMenuStateOff()} href="#OurWork">Our Work</a></li>
             <li><a onClick={() => toggleMenuStateOff()} href="#Services">Services</a></li>
-            <li><a onClick={() => toggleMenuStateOff()} href="#Contact">Contact</a></li>
+            <li><a onClick={() => toggleMenuStateOff()} href="mailto: robkaymua@gmail.com">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -102,7 +102,7 @@ export default function Home() {
           <li><a href="#About">About</a></li>
           <li><a href="#OurWork">Our Work</a></li>
           <li><a href="#Services">Services</a></li>
-          <li><a href="#Contact">Contact</a></li>
+          <li><a href="mailto: robkaymua@gmail.com">Contact</a></li>
         </ul>
       </div>
       </div>

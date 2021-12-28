@@ -136,6 +136,12 @@ p {
   color: rgb(210, 210, 210);
 }
 
+@media (max-width: 200px) {
+  .faded.faded-all:after {
+    box-shadow: none;
+  }
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
