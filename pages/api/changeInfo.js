@@ -11,7 +11,7 @@ export default async function changeInfoSwitch(req, res){
 
     function refreshPage() {
         axios
-        .post(`${process.env.REFRESH_HOOK}`, {})
+        .post(process.env.REFRESH_HOOK)
         .then(res => console.log('Refresh hook executed'))
         .catch(err => console.log('Refresh hook error.'))
     }
