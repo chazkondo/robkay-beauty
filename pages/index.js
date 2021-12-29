@@ -14,7 +14,13 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import {useState} from 'react'
 
-export default function Home() {
+import dbConnect from '../utils/dbConnect';
+
+import text from '../models/text';
+
+
+export default function Home(props) {
+  console.log(props, 'props here')
   const myDate = new Date();
   const [mobileMenuState, setMobileMenuState] = useState(false)
 
@@ -25,6 +31,7 @@ export default function Home() {
   function toggleMenuStateOff() {
     return setMobileMenuState(false)
   }
+
   return (
     <div id="Home" className={styles.container}>
       <Head>
@@ -118,7 +125,7 @@ export default function Home() {
           className={styles.contentWrapper}>
           <div className={styles.content}>
             <h1 className={styles.title}>
-            Mixing business with beauty.
+            {props.text.intro}
             </h1>
           </div>
         </div>
@@ -130,7 +137,7 @@ export default function Home() {
             <div className={styles.hideMobileAboutText}>
               <div style={{width: '75%'}}>
               <p className={styles.title}>
-                <i>With over 20 years of experience in the Beauty Industry, Robkay Beauty is your modern Makeup Artist utilizing the latest makeup techniques to bring out each client&apos;s unique beauty.</i>
+                <i>{props.text.caption1}</i>
               </p>
               </div>
             </div>
@@ -155,7 +162,7 @@ export default function Home() {
             <div className={styles.showMobileAboutText}>
               <div style={{textAlign: 'center'}}>
               <p>
-                <i>With over 20 years of experience in the Beauty Industry, Robkay Beauty is your modern Makeup Artist utilizing the latest makeup techniques to bring out each client&apos;s unique beauty.</i>
+                <i>{props.text.caption1}</i>
               </p>
               </div>
             </div>
@@ -192,7 +199,7 @@ export default function Home() {
             <div className={styles.showMobileAboutText}>
               <div style={{textAlign: 'center'}}>
               <p>
-                <i>Our passion is helping clients rediscover and embrace their inner confidence.</i>
+                <i>{props.text.caption2}</i>
               </p>
               </div>
             </div>
@@ -259,4 +266,16 @@ export default function Home() {
       </footer>
     </div>
   )
+}
+
+export async function getStaticProps(context) {
+
+  dbConnect();
+  const pageText = await text.find({_id: process.env.DATA_ID});
+  console.log(pageText, 'hello?')
+  return {
+    props: {
+      text: JSON.parse(JSON.stringify(pageText[0]))
+    }
+  }
 }

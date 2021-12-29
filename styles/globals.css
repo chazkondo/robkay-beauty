@@ -50,6 +50,13 @@ body {
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
+html,
+body,
+body > div:first-child,
+div#__next,
+div#__next > div {
+  height: 100%;
+}
 
 a {
   color: inherit;
