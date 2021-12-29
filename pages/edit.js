@@ -5,9 +5,10 @@ import {useState, useEffect} from 'react';
 import dbConnect from '../utils/dbConnect';
 
 import text from '../models/text';
+import { useRouter } from 'next/router'
 
 export default function Edit(props) {
-
+  const router = useRouter()
   const [intro, updateIntro] = useState(props.text.intro)
   const [caption1, updateCaption1] = useState(props.text.caption1)
   const [caption2, updateCaption2] = useState(props.text.caption2)
@@ -44,7 +45,10 @@ export default function Edit(props) {
         caption1: caption1,
         caption2: caption2
     }})
-      .then(res => alert('Update Successful. Please wait a few minutes for changes to refresh.'))
+      .then(res => {
+        alert('Update Successful. Please wait a few minutes for changes to refresh.');
+        router.push('/')
+      })
       .catch(()=>alert('An error occurred.'))
   }
 
