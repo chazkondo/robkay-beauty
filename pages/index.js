@@ -272,8 +272,8 @@ export async function getStaticProps(context) {
 
   dbConnect();
   const pageText = await text.find({_id: process.env.DATA_ID});
-  console.log(pageText, 'hello?')
   return {
+    revalidate: 60,
     props: {
       text: JSON.parse(JSON.stringify(pageText[0]))
     }
