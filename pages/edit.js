@@ -19,7 +19,7 @@ export default function Edit(props) {
   const [passwordIsDisabled, disablePasswordInput] = useState(false)
 
   useEffect(()=>{
-    if (passwordValue.length === 12) {
+    if (passwordValue.length === 12 && usernameValue.length === 3) {
     disablePasswordInput(true)
     axios
       .post(`/api/validate`, {
