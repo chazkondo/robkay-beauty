@@ -172,7 +172,7 @@ export default function Home(props) {
             className={styles.sliderDiv}
             style={{display: 'flex', paddingTop: '12.5vw', justifyContent: 'center', alignItems: 'center'}}
           >
-                        <Carousel dynamicHeight={true} emulateTouch={true} showThumbs={false}>
+            <Carousel dynamicHeight={true} emulateTouch={true} showThumbs={false} autoPlay={true} infiniteLoop={true} interval={7000}>
             <div>
         <Image
           src={showcase}
