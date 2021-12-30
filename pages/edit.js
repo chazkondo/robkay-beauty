@@ -83,17 +83,17 @@ export default function Edit(props) {
       <h1>
       Intro: 
     </h1>
-    <textarea name="text" rows="14" cols="10" wrap="soft" style={{width: '75%', height: '14%', padding: 5, wordWrap: 'break-word'}} type="text" value={intro} onChange={e => updateIntroFunction(e)} />
+    <textarea name="text" wrap="soft" style={{width: '75%', height: '14%', padding: 5, wordWrap: 'break-word'}} type="text" value={intro} onChange={e => updateIntroFunction(e)} />
     <br />
     <h1>
         Caption 1: 
     </h1>
-    <textarea name="text" rows="14" cols="10" wrap="soft" style={{width: '75%', height: '14%', padding: 5}} type="text" value={caption1} onChange={e => updateCaption1Function(e)} />
+    <textarea name="text" wrap="soft" style={{width: '75%', height: '14%', padding: 5}} type="text" value={caption1} onChange={e => updateCaption1Function(e)} />
     <br />
     <h1>
         Caption 2: 
     </h1>
-    <textarea name="text" rows="14" cols="10" wrap="soft" style={{width: '75%', height: '14%', padding: 5}} type="text" value={caption2} onChange={e => updateCaption2Function(e)} />
+    <textarea name="text" wrap="soft" style={{width: '75%', height: '14%', padding: 5}} type="text" value={caption2} onChange={e => updateCaption2Function(e)} />
     <br />
     <button style={{padding: 5}} onClick={()=>update()}>Save Changes</button>
     <br />
