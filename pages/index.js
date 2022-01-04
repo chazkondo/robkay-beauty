@@ -39,11 +39,11 @@ export default function Home(props) {
         <meta name="description" content={"Robkay Beauty - " + props.text.intro + ". " + props.text.caption2} />
         <meta name="author" content="Robyn K" />
         <meta property="url" content="https://robkaybeauty.com" />
-        <meta property="image" content="/robyn.png" />
+        <meta property="image" content="https://robkaybeauty.com/robyn.png" />
         <meta name="og:description" content={"Robkay Beauty - " + props.text.intro + ". " + props.text.caption2} />
         <meta name="og:author" content="Robyn K" />
         <meta property="og:url" content="https://robkaybeauty.com" />
-        <meta property="og:image" content="/robyn.png" />
+        <meta property="og:image" content="https://robkaybeauty.com/robyn.png" />
         <link
           rel="preload"
           href="/fonts/Acumin-RPro.otf"
