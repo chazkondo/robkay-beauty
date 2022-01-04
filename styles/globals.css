@@ -30,13 +30,13 @@
   font-display: swap;
 }
 
-/* @font-face {
-  font-family: "Acumin-Pro";
+@font-face {
+  font-family: "Acumin-BPro";
   src: url("/fonts/Acumin-BdPro.otf");
   font-style: bold;
-  font-weight: 500;
+  font-weight: 700;
   font-display: swap;
-} */
+}
 
 html,
 body {

@@ -132,7 +132,7 @@ export default function Home(props) {
           className={styles.contentWrapper}>
           <div className={styles.content}>
             <h1 className={styles.title}>
-            {props.text.intro}
+            <span className={styles.header}>{props.text.intro}</span>
             </h1>
           </div>
         </div>
