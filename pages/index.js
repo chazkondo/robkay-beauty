@@ -233,7 +233,7 @@ export default function Home(props) {
                 </li>
                 <br/>
                 <li>
-                  <p><i>Bridal Makeup Glam</i></p>
+                  <p><i>Bridal Party Glam</i></p>
                   <p><i>$100 ... 1 hr 30min</i></p>
                 </li>
                 <br/>
