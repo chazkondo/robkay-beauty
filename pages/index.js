@@ -233,13 +233,13 @@ export default function Home(props) {
                 </li>
                 <br/>
                 <li>
-                  <p><i>Bridal Party Glam</i></p>
-                  <p><i>$100 ... 1 hr 30min</i></p>
+                  <p><i>Bridal Makeup</i></p>
+                  <p><i>$150 ... 2 hrs</i></p>
                 </li>
                 <br/>
                 <li>
-                  <p><i>Bridal Makeup</i></p>
-                  <p><i>$150 ... 2 hrs</i></p>
+                  <p><i>Bridal Party Glam</i></p>
+                  <p><i>$100 ... 1 hr 30min</i></p>
                 </li>
                 <br/>
                 <li>
@@ -253,7 +253,7 @@ export default function Home(props) {
                 </li>
                 <br/>
                 <li>
-                  <p><i>Brows Touch Up</i></p>
+                  <p><i>Brows Touch Up (6-8 weeks)</i></p>
                   <p><i>$75 ... 1 hr 30min</i></p>
                 </li>
                 <br/>
