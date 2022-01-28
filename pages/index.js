@@ -190,9 +190,9 @@ export default function Home(props) {
       <main className={styles.main}>
         <div className={styles.contentWrapper}>
           <div className={styles.content}>
-            <h1 className={styles.title}>Mixing Business</h1>
-            <h1 className={styles.title}>With Beauty</h1>
-            <span style={{ fontSize: "2vmax" }}>♡</span>
+            <h1 className={styles.title}>{props.text.intro1}</h1>
+            <h1 className={styles.title}>{props.text.intro2}</h1>
+            <span style={{ fontSize: "2vmax" }}>{props.text.intro3}</span>
           </div>
         </div>
         <div id="About" style={{ display: "flex", width: "100%" }}>
